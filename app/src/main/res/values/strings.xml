@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dispatch System App</string>
+    <string name="pim_app">PIM App</string>
+    <string name="tunnel_app">Tunnel App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

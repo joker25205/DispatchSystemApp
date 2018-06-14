@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/select_device"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:text="Title"/>
+
+        <TextView
+            android:id="@+id/tv_mac_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="MacId"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/connect_to_pim_app"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Connect to Pim"/>
+
+        <Button
+            android:id="@+id/connect_to_tunnel_app"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Connect to Tunnel"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

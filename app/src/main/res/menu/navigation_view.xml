@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/connection_device"
+            android:title="Connection to device" />
+        <item
+            android:id="@+id/tunnel_communication"
+            android:title="Tunnel communication" />
+
+    </group>
+
+</menu>
