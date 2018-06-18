@@ -1,5 +1,6 @@
-package com.ukeess.dispatchsystemapp.bluetooth
+package com.ukeess.dispatchsystemapp.enums
 
 enum class BluetoothServerType {
-    METER_TUNNEL
+    METER_TUNNEL,
+    API
 }

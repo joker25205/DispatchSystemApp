@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
         <item
-            android:id="@+id/menu_red"
+            android:id="@+id/state_connection_api"
             app:showAsAction="always"
             android:title="@string/pim_app"/>
         <item
-            android:id="@+id/menu_green"
+            android:id="@+id/state_connection_meter_tunnel"
             app:showAsAction="always"
             android:title="@string/tunnel_app"/>
 </menu>

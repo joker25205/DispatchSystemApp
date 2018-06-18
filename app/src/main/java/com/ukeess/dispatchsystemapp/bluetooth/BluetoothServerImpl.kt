@@ -3,6 +3,7 @@ package com.ukeess.dispatchsystemapp.bluetooth
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothSocket
 import android.util.Log
+import com.ukeess.dispatchsystemapp.enums.BluetoothServerType
 import com.ukeess.dispatchsystemapp.meter.HwMeterPacket
 import java.io.IOException
 import java.io.InputStream
@@ -10,7 +11,7 @@ import java.io.OutputStream
 import java.util.*
 
 
-class BluetoothServerImpl(val name: String, val identifier: UUID, val listener: BluetoothServerListener, val type: BluetoothServerType) : BluetoothServer, BluetoothServerSendData {
+class BluetoothServerImpl(val name: String, val identifier: UUID, val listener: BluetoothServerListener, val type: BluetoothServerType) : BluetoothServer, DataSender {
 
     private val TAG = "BluetoothController"
 

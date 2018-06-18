@@ -1,6 +1,6 @@
-package com.ukeess.dispatchsystemapp.model
+package com.ukeess.dispatchsystemapp.enums
 
 enum class LogType {
-    SEND,
-    RECEIVED
+    REQUEST,
+    RESPONSE
 }

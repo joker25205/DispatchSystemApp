@@ -1,5 +1,5 @@
 package com.ukeess.dispatchsystemapp.bluetooth
 
-interface BluetoothServerSendData {
+interface DataSender {
     fun send(b: ByteArray)
 }

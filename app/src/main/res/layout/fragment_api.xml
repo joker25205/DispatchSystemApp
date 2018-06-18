@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btPimStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PIM STATUS"/>
+
+        <Button
+            android:id="@+id/btStartTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="START TRIP"/>
+
+        <Button
+            android:id="@+id/btUpdateTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPDATE TRIP"/>
+
+        <Button
+            android:id="@+id/btRequestPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REQUEST PAYMENT"/>
+
+        <Button
+            android:id="@+id/btPaymentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PAYMENT STATUS"/>
+
+        <Button
+            android:id="@+id/btFinishTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FINISH TRIP"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/apiMessageList"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+</LinearLayout>

@@ -9,6 +9,9 @@
         <item
             android:id="@+id/tunnel_communication"
             android:title="Tunnel communication" />
+        <item
+            android:id="@+id/api_communication"
+            android:title="Api communication" />
 
     </group>
 

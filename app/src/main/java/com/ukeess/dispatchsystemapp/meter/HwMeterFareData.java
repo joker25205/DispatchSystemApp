@@ -3,6 +3,8 @@ package com.ukeess.dispatchsystemapp.meter;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import static com.ukeess.dispatchsystemapp.utils.DecimalUtilsKt.createBigDecimal;
+
 
 public class HwMeterFareData implements Serializable {
     private static final long serialVersionUID = 2L;
@@ -41,6 +43,10 @@ public class HwMeterFareData implements Serializable {
         return mFare;
     }
 
+    public void setFare(double fare) {
+        mFare = createBigDecimal(fare);
+    }
+
     public void setFare(BigDecimal fare) {
         mFare = fare;
     }
@@ -49,14 +55,14 @@ public class HwMeterFareData implements Serializable {
         return mFare.doubleValue();
     }
 
-    public void setFare(double fare) {
-        mFare = DecimalUtils.createBigDecimal(fare);
-    }
-
     // ********************** extras ***********************
 
     public BigDecimal getExtras() {
         return mExtras;
+    }
+
+    public void setExtras(double extras) {
+        mExtras = createBigDecimal(extras);
     }
 
     public void setExtras(BigDecimal extras) {
@@ -66,11 +72,6 @@ public class HwMeterFareData implements Serializable {
     public double getExtrasDouble() {
         return mExtras.doubleValue();
     }
-
-    public void setExtras(double extras) {
-        mExtras = DecimalUtils.createBigDecimal(extras);
-    }
-
 
     public byte getStatus() {
         return mStatus;
@@ -96,7 +97,7 @@ public class HwMeterFareData implements Serializable {
     }
 
     public void setFinalFax(double finalFax) {
-        mFinalTax = DecimalUtils.createBigDecimal(finalFax);
+        mFinalTax = createBigDecimal(finalFax);
     }
 
     //************************* Mta tax ******************************
@@ -106,7 +107,7 @@ public class HwMeterFareData implements Serializable {
     }
 
     public void setMtaTax(double mtaTax) {
-        mMtaTax = DecimalUtils.createBigDecimal(mtaTax);
+        mMtaTax = createBigDecimal(mtaTax);
     }
 
     //************************* net total ******************************
@@ -116,7 +117,7 @@ public class HwMeterFareData implements Serializable {
     }
 
     public void setNetTotal(double netTotal) {
-        mNetTotal = DecimalUtils.createBigDecimal(netTotal);
+        mNetTotal = createBigDecimal(netTotal);
     }
 
 

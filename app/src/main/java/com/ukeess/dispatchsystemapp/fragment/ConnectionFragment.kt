@@ -3,6 +3,7 @@ package com.ukeess.dispatchsystemapp.bluetooth
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -11,26 +12,26 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
-import kotlinx.android.synthetic.main.fragment_bluetooth_connection.*
 import com.ukeess.dispatchsystemapp.R
 import com.ukeess.dispatchsystemapp.adapters.DeviceListAdapter
-import com.ukeess.dispatchsystemapp.bluetooth.BluetoothServer
+import com.ukeess.dispatchsystemapp.utils.SeparatorDecoration
+import kotlinx.android.synthetic.main.fragment_bluetooth_connection.*
 
 
-class BluetoothConnectionFragment : Fragment(), DeviceListAdapter.DeviceClickListener {
+class ConnectionFragment : Fragment(), DeviceListAdapter.DeviceClickListener {
 
     var deviceList = ArrayList<BluetoothDevice>()
 
-    private var mBluetoothServerMeterTunnel: BluetoothServer? = null
+    private var meterTunnelServer: BluetoothServer? = null
 
 
-    fun setBluetoothServerTunnel(bluetoothServer: BluetoothServer) {
-        mBluetoothServerMeterTunnel = bluetoothServer
+    fun setMeterTunnelServer(server: BluetoothServer) {
+        meterTunnelServer = server
     }
 
     override fun onConnectionToMeterTunnel(device: Int) {
         println("Connection to Meter -> " + deviceList[device].name)
-        mBluetoothServerMeterTunnel?.connectToServer(deviceList[device])
+        meterTunnelServer?.connectToServer(deviceList[device])
         Toast.makeText(context, "Connection to Meter -> " + deviceList[device].name, Toast.LENGTH_LONG).show()
     }
 
@@ -51,7 +52,13 @@ class BluetoothConnectionFragment : Fragment(), DeviceListAdapter.DeviceClickLis
         deviceList.addAll(bluetoothAdapter.bondedDevices)
 
         bluetoothPairedDevicesList.layoutManager = LinearLayoutManager(context, LinearLayout.VERTICAL, false)
+        bluetoothPairedDevicesList.addItemDecoration(SeparatorDecoration(context!!, Color.GRAY, 1.5f))
         val adapter = DeviceListAdapter(deviceList, this)
         bluetoothPairedDevicesList.adapter = adapter
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        deviceList.clear()
     }
 }
